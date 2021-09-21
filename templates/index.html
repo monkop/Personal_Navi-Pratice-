@@ -1,0 +1,127 @@
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Monkop</title>
+        <style>
+            /*  Heading of head */
+
+             .typewriter h1 {
+                overflow: hidden;
+              
+                border-right: .15em solid orange;
+                
+                white-space: nowrap;
+                
+                margin: 0 auto;
+               
+                letter-spacing: .15em;
+               
+                animation:
+                    typing 4.5s steps(40, end),
+                    blink-caret .75s step-end infinite;
+            }
+
+          
+            @keyframes typing {
+                from {
+                    width: 0
+                }
+
+                to {
+                    width: 80%
+                }
+            }
+
+          
+            @keyframes blink-caret {
+
+                from,
+                to {
+                    border-color: transparent
+                }
+
+                50% {
+                    border-color: orange;
+                }
+            }
+ 
+            /* last */
+            .row {
+                display: flex;
+            }
+
+            .column {
+                float: left;
+                width: 33.33%;
+                padding: 5px;
+                flex: 33.33%;
+                padding: 5px;
+            }
+
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            @media screen and (max-width: 500px) {
+                .column {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="typewriter">
+
+        <h1 >Monkop Personal Nagbar</h1>
+    </div>
+    <hr>
+
+        <div class="row">
+            <div class="column">
+                {% load static %}
+                <a href="https://github.com" >
+                    <img border="0" alt="Git" src="\static\git.png" width="auto" height="100">
+                </a>
+                <hr>
+            </div>
+
+            <div class="column">
+                {% load static %}
+                <a href="https://google.com">
+                    <img border="0" alt="Google" src="\static\goo.png" width="auto" height="100">
+                </a>
+                <hr>
+            </div>
+
+            <div class="column">
+                <a href="https://instagram.com">
+                    <img border="0" alt="InstaGram" src="\static\insta.png" width="auto" height="100">
+                </a>
+                <hr>
+            </div>
+            <div class="column">
+                <a href="https://youtube.com">
+                    <img border="0" alt="Youtube" src="\static\you.png" width="auto" height="100">
+                </a>
+                <hr>
+            </div>
+            <div class="column">
+                <a href="https://facebook.com">
+                    <img border="0" alt="facebook" src="\static\face.png" width="auto" height="100">
+                </a>
+                <hr>
+            </div>
+
+    </body>
+
+</html>
+{% endblock body %}
